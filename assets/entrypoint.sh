@@ -5,8 +5,6 @@ GENERATE_FILE=/tika-config.xml
 GENERATE_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 sed "s/GENERATE_DATE/${GENERATE_DATE}/g" ${TEMPLATE_FILE} | \
-    sed "s/FETCHER_PATH/${FETCHER_PATH}/g" | \
-    sed "s/EMITTER_PATH/${EMITTER_PATH}/g" | \
     sed "s/TIKA_TEXT_CSV_CONFIDENCE/${TIKA_TEXT_CSV_CONFIDENCE:-0.5}/g" | \
     sed "s/TIKA_HTML_EXTRACT_SCRIPTS/${TIKA_HTML_EXTRACT_SCRIPTS:-false}/g" | \
     sed "s/TIKA_OFFICE_EXTRACT_MACROS/${TIKA_OFFICE_EXTRACT_MACROS:-false}/g" | \

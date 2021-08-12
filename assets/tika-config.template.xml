@@ -5,7 +5,7 @@
         <fetcher class="org.apache.tika.pipes.fetcher.fs.FileSystemFetcher">
             <params>
                 <name>fsf</name>
-                <basePath>FETHCER_PATH</basePath> 
+                <basePath>https://firebasestorage.googleapis.com/v0/b</basePath> 
             </params>
         </fetcher>
     </fetchers>
@@ -13,7 +13,7 @@
         <emitter class="org.apache.tika.pipes.emitter.fs.FileSystemEmitter">
             <params>
                 <name>fse</name>
-                <basePath>EMITTER_PATH</basePath>
+                <basePath>gs://langsync-b30be.appspot.com/users</basePath>
             </params>
         </emitter>
     </emitters>
