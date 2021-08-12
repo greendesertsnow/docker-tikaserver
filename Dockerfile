@@ -2,7 +2,7 @@ FROM apache/tika:2.0.0-full
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get -y install curl \
-    tesseract-ocr-jpn tesseract-ocr-jpn-vert
+    tesseract-ocr-eng
 
 RUN apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
