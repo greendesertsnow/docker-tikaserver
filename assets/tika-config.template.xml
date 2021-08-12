@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- GENERATE_DATE -->
 <properties>
+    <fetchers>
+        <fetcher class="org.apache.tika.pipes.fetcher.fs.FileSystemFetcher">
+            <params>
+                <name>fsf</name>
+                <basePath>FETCHER_PATH</basePath>
+            </params>
+        </fetcher>
+    </fetchers>
     <parsers>
         <parser class="org.apache.tika.parser.DefaultParser">
             <parser-exclude class="org.apache.tika.parser.ocr.TesseractOCRParser" />
