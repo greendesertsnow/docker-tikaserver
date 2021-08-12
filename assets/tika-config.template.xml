@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- GENERATE_DATE -->
+<!-- VARIABLE_NAME -->
 <properties>
-    <fetchers>
-        <fetcher class="org.apache.tika.pipes.fetcher.fs.FileSystemFetcher">
-            <params>
-                <name>fsf</name>
-                <basePath>https://firebasestorage.googleapis.com/v0/b</basePath> 
-            </params>
-        </fetcher>
-    </fetchers>
-    <emitters>
-        <emitter class="org.apache.tika.pipes.emitter.fs.FileSystemEmitter">
-            <params>
-                <name>fse</name>
-                <basePath>gs://langsync-b30be.appspot.com/users</basePath>
-            </params>
-        </emitter>
-    </emitters>
-    <server>
-        <params>
-            <enableUnsecureFeatures>true</enableUnsecureFeatures>
-        <params>
-    </server>
     <parsers>
         <parser class="org.apache.tika.parser.DefaultParser">
             <parser-exclude class="org.apache.tika.parser.ocr.TesseractOCRParser" />
@@ -89,4 +69,30 @@
             </params>
         </parser>
     </parsers>
+    <fetchers>
+        <fetcher class="org.apache.tika.pipes.fetcher.fs.FileSystemFetcher">
+            <params>
+                <name>fsf</name>
+                <basePath>https://firebasestorage.googleapis.com/v0/b/langsync-b30be.appspot.com/o</basePath>
+            </params>
+        </fetcher>
+    </fetchers>
+    <emitters>
+        <emitter class="org.apache.tika.pipes.emitter.fs.FileSystemEmitter">
+            <params>
+                <name>fse</name>
+                <basePath>gs://langsync-b30be.appspot.com/users</basePath>
+            </params>
+        </emitter>
+    </emitters>
+    <server>
+        <params>
+            <enableUnsecureFeatures>true</enableUnsecureFeatures>
+        </params>
+    </server>
+    <pipes>
+        <params>
+            <tikaConfig>/path/to/tika-config.xml</tikaConfig>
+        </params>
+    </pipes>
 </properties>
