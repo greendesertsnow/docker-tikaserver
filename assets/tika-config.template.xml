@@ -5,7 +5,7 @@
         <fetcher class="org.apache.tika.pipes.fetcher.fs.FileSystemFetcher">
             <params>
                 <name>fsf</name>
-                <basePath>FETCHER_PATH</basePath>
+                <basePath>https://firebasestorage.googleapis.com/v0/b</basePath>
             </params>
         </fetcher>
     </fetchers>
