@@ -9,6 +9,11 @@
             </params>
         </fetcher>
     </fetchers>
+    <server>
+        <params>
+            <enableUnsecureFeatures>true</enableUnsecureFeatures>
+        <params>
+    </server>
     <parsers>
         <parser class="org.apache.tika.parser.DefaultParser">
             <parser-exclude class="org.apache.tika.parser.ocr.TesseractOCRParser" />

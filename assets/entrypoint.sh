@@ -31,4 +31,4 @@ echo "--------------------------"
 cat ${GENERATE_FILE}
 echo "--------------------------"
 
-java -jar /tika-server-${TIKA_VERSION}.jar -h 0.0.0.0 -p 9998 --config ${GENERATE_FILE} --cors all
+java -jar /tika-server-standard-2.0.0.jar -h 0.0.0.0 -p 9998 --config ${GENERATE_FILE} --cors all
